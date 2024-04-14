@@ -24,7 +24,11 @@ full_directory="${base_directory}/${directory_name}"
 # Create the directory if it doesn't exist
 mkdir -p "$full_directory"
 
+# Assuming $url, $full_directory, and $filename are already set and exported.
+
 # Download the file with wget, saving it with the extracted filename in the specified directory
+wget "$url" -O "${full_directory}/${filename}"
+
 # Check the exit status of the last command (wget in this case)
 if [ $? -eq 0 ]; then
     echo "Downloaded ${filename} to ${full_directory}/"
