@@ -161,3 +161,7 @@ cython_debug/
 
 # lets not upload the downloaded data to github
 data/
+*.DS_Store
+*.ipynb_checkpoints
+
+results/generations
