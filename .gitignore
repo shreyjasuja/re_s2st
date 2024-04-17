@@ -164,4 +164,5 @@ data/
 *.DS_Store
 *.ipynb_checkpoints
 
-results/generations
+*.tar.gz
+results/**/generations
