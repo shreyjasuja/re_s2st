@@ -3,7 +3,9 @@
 
 ## About the authors and this work
 
-This repository contains the code and methodology used to reproduce the results from the studies "SeamlessM4T: Massively Multilingual & Multimodal Machine Translation" and "Robust Speech Recognition via Large-Scale Weak Supervision". This work is carried out by Shrey Jasuja from NYU Tandon School of Engineering under the guidance of Prof. Fraida Fund as part of a reproducibility study in the field of speech-to-text translation using large multitask models.
+This repository contains the code and methodology used to reproduce the results from the studies "SeamlessM4T: Massively Multilingual & Multimodal Machine Translation" and "Robust Speech Recognition via Large-Scale Weak Supervision". 
+
+This work is carried out by **Shrey Jasuja** from NYU Tandon School of Engineering under the guidance of **Prof. Fraida Fund** as part of a reproducibility study in the field of speech-to-text translation using large multitask models.
 
 ## Chameleon Testbed and Trovi Artifacts
 
