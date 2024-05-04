@@ -11,7 +11,7 @@ This work is carried out by **Shrey Jasuja** from NYU Tandon School of Engineeri
 
 The research utilized the Chameleon testbed, which provides a bare-metal reconfiguration system, allowing detailed control over computational resources which is crucial for reproducibility studies. Chameleon's robust system aided in achieving consistent results across trials. Additionally, we used Trovi to share our research artifacts, ensuring that others in the research community can access and utilize our exact datasets, models, and configurations.
 
-Here is the link to the trovi artifacts : 
+Here is the link to the Trovi artifacts : https://chameleoncloud.org/experiment/share/3acdf3d7-08dc-4680-8db5-a62bdb07cc11
 
 ## Summary of Results
 
