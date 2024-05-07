@@ -3,15 +3,19 @@
 
 ## About the authors and this work
 
-This repository contains the code and methodology used to reproduce the results from the studies "SeamlessM4T: Massively Multilingual & Multimodal Machine Translation"[1] and "Robust Speech Recognition via Large-Scale Weak Supervision"[2]. 
+This repository contains the code and methodology used to reproduce the results from the studies "SeamlessM4T: Massively Multilingual & Multimodal Machine Translation" [1] and "Robust Speech Recognition via Large-Scale Weak Supervision" [2]. 
 
 This work is carried out by **Shrey Jasuja** from NYU Tandon School of Engineering under the guidance of **Prof. Fraida Fund** as part of a reproducibility study in the field of speech-to-text translation using large multitask models.
 
 ## Chameleon Testbed and Trovi Artifacts
 
-The research utilized the Chameleon[3] testbed, which provides a bare-metal reconfiguration system, allowing detailed control over computational resources which is crucial for reproducibility studies. Chameleon's robust system aided in achieving consistent results across trials. Additionally, we used Trovi to share our research artifacts, ensuring that others in the research community can access and utilize our exact datasets, models, and configurations.
+The research utilized the Chameleon [3] testbed, which provides a bare-metal reconfiguration system, allowing control over computational resources which is crucial for reproducibility studies. The following resources were used on Chameleon testbeds while conducting this study:
 
-Here is the link to the Trovi artifacts : https://chameleoncloud.org/experiment/share/3acdf3d7-08dc-4680-8db5-a62bdb07cc11
+- **GPU Server:** We used RTX 6000 GPU on Chameleon to perform model inference and evaluation over the CoVoST 2 and FLEURS datasets.
+- **Object Store:** Object store helped us to easily handle the datasets across different experimental configurations
+- **Trovi Artifact:** We used Trovi to share our research artifacts, ensuring that others in the research community can access and utilize our exact datasets, models, and configurations.
+
+Here is the link to the Trovi artifact: https://chameleoncloud.org/experiment/share/3acdf3d7-08dc-4680-8db5-a62bdb07cc11
 
 ## Summary of Results
 
