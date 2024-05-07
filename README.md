@@ -31,11 +31,11 @@ Our findings are consistent with the published results, confirming the claims ma
 
 ## Interesting Parts/Challenges
 
-### Interesting Aspects:
+### Aspects which eased Reproducibility:
 
-- **Access to Models via HuggingFace**: Utilizing HuggingFace as a platform provided streamlined access to several key models used in this study, such as Whisper and SeamlessM4T. This not only facilitated the reproducibility but also enhanced the efficiency of setting up experiments.
+- **Access to Models via HuggingFace**: Utilizing HuggingFace as a platform provides streamlined access to several key models used in this study, such as Whisper and SeamlessM4T. This not only facilitated reproducibility but also enhanced the efficiency of setting up experiments.
   
-- **Documentation and Community Support**: The well-documented model cards and active community discussions around these models helped in understanding the nuances of each model's implementation and usage, which significantly aided the debugging and fine-tuning processes.
+- **Documentation and Community Support**: The well-documented model cards and active community discussions around these models helped in understanding the nuances of each model's implementation and usage, which aided the debugging and fine-tuning processes.
 
 - **Utilization of the Chameleon Testbed**: Employing the Chameleon testbed proved crucial for obtaining reproducible and reliable results due to its robust bare-metal configuration capabilities. This environment allowed precise control over computational resources, which is often a limitation in computational research.
 
@@ -54,9 +54,9 @@ These aspects of the project highlighted both the potential and the limitations 
 
 ## Notebooks and Their Functions
 
-1. `initiate_server.ipynb`: Set up the Chameleon environment and install necessary dependencies.
-2. `covost2_eval.ipynb`: Code to run inference from different models over the CoVoST2 dataset and reproduce the results.
-3. `fleurs_eval.ipynb`: Contains the code to run inference using the pre-trained models and compute BLEU scores on the FLEURS dataset.
+1. `initiate_server.ipynb`: Setup the Chameleon environment and install necessary dependencies.
+2. `covost2_eval.ipynb`: Runs inference using the pre-trained models and computes BLEU scores on the CoVoST 2 dataset.
+3. `fleurs_eval.ipynb`: Runs inference using the pre-trained models and computes BLEU scores on the FLEURS dataset.
 4. `analyze_results.ipynb`: Analyze the results and compare them against the original claims.
 
 ## References
