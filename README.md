@@ -57,7 +57,7 @@ These aspects of the project highlighted both the potential and the limitations 
 1. `initiate_server.ipynb`: Setup the Chameleon environment and install necessary dependencies.
 2. `covost2_eval.ipynb`: Runs inference using the pre-trained models and computes BLEU scores on the CoVoST 2 dataset.
 3. `fleurs_eval.ipynb`: Runs inference using the pre-trained models and computes BLEU scores on the FLEURS dataset.
-4. `analyze_results.ipynb`: Analyze the results and compare them against the original claims. You can also run this notebook without actually performing an inference from the section `Reproduced results summaries` to check for our results.
+4. `analyze_results.ipynb`: Analyze the results and compare them against the original claims. You can also run this notebook without generating new data by running it from the section `Reproduced results summaries` to check for our results.
 
 ## References
 
