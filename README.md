@@ -3,13 +3,13 @@
 
 ## About the authors and this work
 
-This repository contains the code and methodology used to reproduce the results from the studies "SeamlessM4T: Massively Multilingual & Multimodal Machine Translation" and "Robust Speech Recognition via Large-Scale Weak Supervision". 
+This repository contains the code and methodology used to reproduce the results from the studies "SeamlessM4T: Massively Multilingual & Multimodal Machine Translation"[1] and "Robust Speech Recognition via Large-Scale Weak Supervision"[2]. 
 
 This work is carried out by **Shrey Jasuja** from NYU Tandon School of Engineering under the guidance of **Prof. Fraida Fund** as part of a reproducibility study in the field of speech-to-text translation using large multitask models.
 
 ## Chameleon Testbed and Trovi Artifacts
 
-The research utilized the Chameleon testbed, which provides a bare-metal reconfiguration system, allowing detailed control over computational resources which is crucial for reproducibility studies. Chameleon's robust system aided in achieving consistent results across trials. Additionally, we used Trovi to share our research artifacts, ensuring that others in the research community can access and utilize our exact datasets, models, and configurations.
+The research utilized the Chameleon[3] testbed, which provides a bare-metal reconfiguration system, allowing detailed control over computational resources which is crucial for reproducibility studies. Chameleon's robust system aided in achieving consistent results across trials. Additionally, we used Trovi to share our research artifacts, ensuring that others in the research community can access and utilize our exact datasets, models, and configurations.
 
 Here is the link to the Trovi artifacts : https://chameleoncloud.org/experiment/share/3acdf3d7-08dc-4680-8db5-a62bdb07cc11
 
@@ -49,9 +49,10 @@ These aspects of the project highlighted both the potential and the limitations 
 
 ## References
 
-Please refer to the `References` section in the repository for a comprehensive list of all sources and citations used in this study.
+- [1]Loı̈c Barrault, Yu-An Chung, Mariano Cora Meglioli, David Dale, Ning Dong, Paul-Ambroise Duquenne, Hady Elsahar, Hongyu Gong, Kevin Heffernan, John Hoffman, and others. 2023. SeamlessM4T-Massively Multilingual & Multimodal Machine Translation. arXiv preprint arXiv:2308.11596 (2023).
 
-- [SeamlessM4T: Massively Multilingual & Multimodal Machine Translation](https://arxiv.org/abs/2308.11596)
-- [Robust Speech Recognition via Large-Scale Weak Supervision](https://arxiv.org/abs/2212.04356)
-- [Lessons learned from the Chameleon testbed](https://dl.acm.org/doi/abs/10.5555/3489146.3489161)
+- [2]Alec Radford, Jong Wook Kim, Tao Xu, Greg Brockman, Christine Mcleavey, and Ilya Sutskever. 2023. Robust Speech Recognition via Large-Scale Weak Supervision. In Proceedings of the 40th International Conference on Machine Learning (Proceedings of Machine Learning Research), PMLR, 28492–28518. Retrieved from https://proceedings.mlr.press/v202/radford23a.html
+
+
+- [3]Kate Keahey, Jason Anderson, Zhuo Zhen, Pierre Riteau, Paul Ruth, Dan Stanzione, Mert Cevik, Jacob Colleran, Haryadi S. Gunawi, Cody Hammock, Joe Mambretti, Alexander Barnes, François Halbach, Alex Rocha, and Joe Stubbs. 2020. Lessons learned from the Chameleon testbed. In Proceedings of the 2020 USENIX Conference on Usenix Annual Technical Conference (USENIX ATC'20). USENIX Association, USA, Article 15, 219–233.
 
