@@ -57,14 +57,14 @@ These aspects of the project highlighted both the potential and the limitations 
 1. `initiate_server.ipynb`: Setup the Chameleon environment and install necessary dependencies.
 2. `covost2_eval.ipynb`: Runs inference using the pre-trained models and computes BLEU scores on the CoVoST 2 dataset.
 3. `fleurs_eval.ipynb`: Runs inference using the pre-trained models and computes BLEU scores on the FLEURS dataset.
-4. `analyze_results.ipynb`: Analyze the results and compare them against the original claims.
+4. `analyze_results.ipynb`: Analyze the results and compare them against the original claims. You can also run this notebook without actually performing an inference from the section `Reproduced results summaries` to check for our results.
 
 ## References
 
-- [1]Loı̈c Barrault, Yu-An Chung, Mariano Cora Meglioli, David Dale, Ning Dong, Paul-Ambroise Duquenne, Hady Elsahar, Hongyu Gong, Kevin Heffernan, John Hoffman, and others. 2023. SeamlessM4T-Massively Multilingual & Multimodal Machine Translation. arXiv preprint arXiv:2308.11596 (2023).
+[1] Loı̈c Barrault, Yu-An Chung, Mariano Cora Meglioli, David Dale, Ning Dong, Paul-Ambroise Duquenne, Hady Elsahar, Hongyu Gong, Kevin Heffernan, John Hoffman, and others. 2023. SeamlessM4T-Massively Multilingual & Multimodal Machine Translation. arXiv preprint arXiv:2308.11596 (2023).
 
-- [2]Alec Radford, Jong Wook Kim, Tao Xu, Greg Brockman, Christine Mcleavey, and Ilya Sutskever. 2023. Robust Speech Recognition via Large-Scale Weak Supervision. In Proceedings of the 40th International Conference on Machine Learning (Proceedings of Machine Learning Research), PMLR, 28492–28518. Retrieved from https://proceedings.mlr.press/v202/radford23a.html
+[2] Alec Radford, Jong Wook Kim, Tao Xu, Greg Brockman, Christine Mcleavey, and Ilya Sutskever. 2023. Robust Speech Recognition via Large-Scale Weak Supervision. In Proceedings of the 40th International Conference on Machine Learning (Proceedings of Machine Learning Research), PMLR, 28492–28518. Retrieved from https://proceedings.mlr.press/v202/radford23a.html
 
 
-- [3]Kate Keahey, Jason Anderson, Zhuo Zhen, Pierre Riteau, Paul Ruth, Dan Stanzione, Mert Cevik, Jacob Colleran, Haryadi S. Gunawi, Cody Hammock, Joe Mambretti, Alexander Barnes, François Halbach, Alex Rocha, and Joe Stubbs. 2020. Lessons learned from the Chameleon testbed. In Proceedings of the 2020 USENIX Conference on Usenix Annual Technical Conference (USENIX ATC'20). USENIX Association, USA, Article 15, 219–233.
+[3] Kate Keahey, Jason Anderson, Zhuo Zhen, Pierre Riteau, Paul Ruth, Dan Stanzione, Mert Cevik, Jacob Colleran, Haryadi S. Gunawi, Cody Hammock, Joe Mambretti, Alexander Barnes, François Halbach, Alex Rocha, and Joe Stubbs. 2020. Lessons learned from the Chameleon testbed. In Proceedings of the 2020 USENIX Conference on Usenix Annual Technical Conference (USENIX ATC'20). USENIX Association, USA, Article 15, 219–233.
 
