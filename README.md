@@ -12,14 +12,22 @@ This work is carried out by **Shrey Jasuja** from NYU Tandon School of Engineeri
 The research utilized the Chameleon [3] testbed, which provides a bare-metal reconfiguration system, allowing control over computational resources which is crucial for reproducibility studies. The following resources were used on Chameleon testbeds while conducting this study:
 
 - **GPU Server:** We used RTX 6000 GPU on Chameleon to perform model inference and evaluation over the CoVoST 2 and FLEURS datasets.
-- **Object Store:** Object store helped us to easily handle the datasets across different experimental configurations
+- **Object Store:** Object store helped us to handle the large datasets across different experimental configurations
 - **Trovi Artifact:** We used Trovi to share our research artifacts, ensuring that others in the research community can access and utilize our exact datasets, models, and configurations.
 
 Here is the link to the Trovi artifact: https://chameleoncloud.org/experiment/share/3acdf3d7-08dc-4680-8db5-a62bdb07cc11
 
 ## Summary of Results
 
-Our findings are consistent with the published results, confirming the claims made in the original studies for most models. The results are demonstrated through BLEU scores and are detailed in the repository.
+Our findings are consistent with the published results, confirming the claims made in the original studies for most models. The results are demonstrated through BLEU scores and are detailed in the repository. Here is a glimpse of one of the reproduced claims. Note, that the values in the parenthesis are the values from the original claim in the paper.
+
+| Model              | size | FLEURS X→eng (n=81) | CoVoST 2 X→eng (n=21) |
+|--------------------|------|--------------------:|----------------------:|
+| XLS-R-2B-S2T       | 2.6B |                  () |           22.1 (22.1) |
+| WHISPER-LARGE-v2   | 1.5B |         16.7 (17.9) |           29.2 (29.1) |
+| AUDIOPaLM-2-8B-AST | 8.0B |              (19.7) |                (37.8) |
+| SEAMLESSM4T-MEDIUM | 1.2B |         20.3 (20.9) |           31.3 (29.8) |
+| SEAMLESSM4T-LARGE  | 2.3B |         23.4 (24.0) |           34.3 (34.1) |
 
 ## Interesting Parts/Challenges
 
