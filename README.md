@@ -19,7 +19,20 @@ Here is the link to the Trovi artifact: https://chameleoncloud.org/experiment/sh
 
 ## Summary of Results
 
-Our findings are consistent with the published results, confirming the claims made in the original studies for most models. The results are demonstrated through BLEU scores and are detailed in the repository. Here is a glimpse of one of the reproduced claims. Note, that the values in the parenthesis are the values from the original claim in the paper.
+Our findings are consistent with the published results, confirming the claims made in the original studies for most models. The results are demonstrated through BLEU scores and are detailed in the repository. Here are our reproduced claims. Note, that the values in the parenthesis are the values from the original claim in the paper.
+
+Reproduced results for Table 4. X→en Speech translation performance in Radford et al. (2023) [2]. The results are in BLEU scores and looks consistent with the original claims. The missing entries for XMEF-X, Maestro and mSLAM-CTC are due to the unavailability of the model checkpoints.
+
+| Model                 | High              | Mid               | Low               | All               |
+|-----------------------|-------------------|-------------------|-------------------|-------------------|
+| XMEF-X                | (34.2)            | (20.2)            | (5.9)             | (14.7)            |
+| XLS-R (2B)            | 36.1 (36.1)       | 27.7 (27.7)       | 15.1 (15.1)       | 22.1 (22.1)       |
+| mSLAM-CTC (2B)        | (37.8)            | (29.6)            | (18.5)            | (24.8)            |
+| Maestro               | (38.2)            | (31.3)            | (18.4)            | (25.2)            |
+| Zero-Shot Whisper     | 36.3 (36.2)       | 33.6 (32.6)       | 24.9 (25.2)       | 29.2 (29.1)       |
+
+
+Reproduced results for Table 16: Multitasking X2T results in Barrault et al. (2023) [1]. The results below show columns only for the X→en translation task as X→en is the focus of this reproducibility study. The results look consistent with the original claims. We notice slight deviations in the results for the model whisper-large-v2 on FLEURS dataset, which could be due to the omission of decoding strategies by the authors in the original study.
 
 | Model              | size | FLEURS X→eng (n=81) | CoVoST 2 X→eng (n=21) |
 |--------------------|------|--------------------:|----------------------:|
@@ -28,6 +41,31 @@ Our findings are consistent with the published results, confirming the claims ma
 | AUDIOPaLM-2-8B-AST | 8.0B |              (19.7) |                (37.8) |
 | SEAMLESSM4T-MEDIUM | 1.2B |         20.3 (20.9) |           31.3 (29.8) |
 | SEAMLESSM4T-LARGE  | 2.3B |         23.4 (24.0) |           34.3 (34.1) |
+
+
+Reproduced results for Table 17: Fleurs S2TT X–eng by resource-level results in Barrault et al. (2023) [1]. The missing entries for the model AUDIOPaLM-2-8B-AST are due to the unavailability of the model checkpoints. The results are consistent with the original claims with slight deviations in the results for the model whisper-large-v2 on FLEURS dataset for the same reason as mentioned above.
+
+
+| Model                 | High (n=15)       | Medium (n=25)     | Low (n=34)        | Low† (n=23)       |
+|-----------------------|-------------------|-------------------|-------------------|-------------------|
+| WHISPER-LARGE-v2      | 23.7 (24.2)       | 17.5 (19.4)       | 14.8 (16.1)       | 17.0 (18.1)       |
+| AUDIOPALM-2-8B-AST    | (27.9)            | (20.9)            | (18.0)            | (22.0)            |
+| SEAMLESSM4T-MEDIUM    | 23.7 (23.9)       | 21.1 (21.8)       | 21.7 (22.2)       | 22.8 (23.5)       |
+| SEAMLESSM4T-LARGE     | 26.6 (26.9)       | 24.5 (25.2)       | 24.9 (25.4)       | 26.5 (27.0)       |
+
+In the following table, we reproduce the results for Table 14: Comparison against cascaded ASR +T2TT models on Fleurs S2TT in Barrault et al. (2023) [1]. We only show the results for the X→en translation task as X→en is the focus of this reproducibility study. We reproduced only one cascaded model, which is WHISPER-MEDIUM (ASR) + NLLB-1.3B as part of this study. The results for direct models are consistent with the original claims. The reproduced results for the cascaded model WHISPER-MEDIUM (ASR) + NLLB-1.3B differ which could be due to the omission of some design choices made by the authors in the original study.
+
+| Model                                     | Type     | Size | X-eng (n=81)     | eng-X (n=88)     |
+|-------------------------------------------|----------|------|------------------|------------------|
+| WHISPER-MEDIUM (ASR) + NLLB-1.3B          | cascaded | 2B   | (19.7)           | (20.5)           |
+| WHISPER-MEDIUM (ASR) + NLLB-3.3B          | cascaded | 4B   | (20.4)           | (21.8)           |
+| WHISPER-LARGE-v2 (ASR) + NLLB-1.3B        | cascaded | 2.8B | 18.2 (22.0)      | (21.0)           |
+| WHISPER-LARGE-v2 (ASR) + NLLB-3.3B        | cascaded | 4.8B | (22.7)           | (22.2)           |
+| WHISPER-LARGE-v2                          | direct   | 1.5B | 16.7 (17.9)      | (-)              |
+| AudioPaLM-2-8B-AST                        | direct   | 8B   | (19.7)           | (-)              |
+| SEAMLESSM4T-MEDIUM                        | direct   | 1B   | 20.3 (20.9)      | (19.2)           |
+| SEAMLESSM4T-LARGE                         | direct   | 2B   | 23.4 (24.0)      | (21.5)           |
+
 
 ## Interesting Parts/Challenges
 
@@ -41,13 +79,15 @@ Our findings are consistent with the published results, confirming the claims ma
 
 ### Challenges Faced:
 
-- **Proprietary Models and Datasets**: Some models, such as AudioPaLM, and their associated datasets and checkpoints were not publicly available, which limited our ability to reproduce certain results. This issue highlights the ongoing challenge in scientific research where access to proprietary tools can impede the validation and extension of published findings.
+- **Proprietary Models and Datasets**: We could only evaluate those models in the claim where models were open-sourced because of two core hurdles. Firstly, most of the authors have proprietary datasets that are not publicly available. Thus, even if they discuss the methodology of their study it is not possible to replicate the model architecture to generate exact results. Second, with the increasing complexity of these large multitask models, it is difficult to put in the computing resources required to train these models as intended even if the data is available. This is why we couldn't reproduce the results for the models AudioPaLM-2-8B-AST, XMEF-X, Maestro, and others.
 
-- **Inconsistencies in Language Codes and Documentation**: Encountering various systems of language coding (e.g., ISO 639-1, BCP-47, ISO 639-3) across different datasets and papers led to complications in data processing. This non-uniformity required additional steps to ensure correct mappings and integrations, which was time-consuming and error-prone.
 
-- **Computational Resource Constraints**: While Chameleon provides excellent control over resources, the sheer computational demand of training and evaluating large-scale models on extensive multilingual datasets meant that experiments were both time and resource-intensive. Despite using robust computational resources, the duration and cost of running these models were significant, reflecting a common barrier in replicating large-scale AI research.
+- **Inconsistencies in Language Codes and Documentation**: We required language codes to access datasets and during model inference while specifying source and target language. We noticed that different papers and datasets specify different language codes, leading to non-uniformity. For example, authors of the Whisper model and CoVoST 2 dataset use ISO 639-1 two-letter language code, FLEURS dataset use BCP-47 codes with two-letter primary subtag and region subtag based on a two-letter country code from ISO 3166-1 alpha-2, NLLB model uses BCP-47 codes with two-letter primary subtag and script subtag based on a four-letter script code from ISO 15924 and Seamless model uses ISO 639-3 language codes. We also noticed that different dialects of the same language increase complexity when trying to establish cross-mapping or directly use a language name.
+ There was also an instance in he SeamlessM4T paper where the authors initially listed ’nno’ and ’nob’ as Norwegian language codes, but later used ’nor’ for data statistics. After thorough verification, we later revealed that ’nob’ was actually used in the implementation.
 
-- **Decoding Strategies Not Specified**: Some deviations in reproduced results could be traced back to unspecified decoding strategies in the original studies. These omissions made it challenging to align our setup perfectly with the original experiments, affecting the accuracy of the replication.
+- **Significant computation time**: We conducted our experiments on the Chameleon testbed on a single RTX 6000 GPU. When inferring models like Whisper-large-v2 for the FLEURS dataset, it took a significant amount of time around 72 hours to run the inference when we specified decoding strategy as beam search with a beam width of 5, selecting the best of 5.
+
+- **Some Omissions by authors**: We noticed some deviation in results for the cascaded model WHISPER-MEDIUM (ASR) + NLLB-1.3B on FLEURS dataset, which could be due to the omission of some design choices made by the authors in the original study.
 
 These aspects of the project highlighted both the potential and the limitations of current research practices in the field of AI, particularly in speech-to-text translation studies.
 
