@@ -87,7 +87,7 @@ In the following table, we reproduce the results for Table 14: Comparison agains
 
 - **Significant computation time**: We conducted our experiments on the Chameleon testbed on a single RTX 6000 GPU. When inferring models like Whisper-large-v2 for the FLEURS dataset, it took a significant amount of time around 72 hours to run the inference when we specified decoding strategy as beam search with a beam width of 5, selecting the best of 5.
 
-- **Some Omissions by authors**: We noticed some deviation in results for the cascaded model WHISPER-MEDIUM (ASR) + NLLB-1.3B on FLEURS dataset, which could be due to the omission of some design choices made by the authors in the original study.
+- **Some Omissions by authors**: We noticed some deviation in results for the cascaded model WHISPER-LARGE-v2 (ASR) + NLLB-1.3B on FLEURS dataset, which could be due to the omission of some design choices made by the authors in the original study.
 
 These aspects of the project highlighted both the potential and the limitations of current research practices in the field of AI, particularly in speech-to-text translation studies.
 
